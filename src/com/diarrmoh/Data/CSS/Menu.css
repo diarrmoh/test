@@ -1,0 +1,14 @@
+.root
+{
+    -fx-background-color: #bd7449;
+} 
+
+.button:hover
+{
+	-fx-effect: dropshadow(three-pass-box, #5c5c5c, 20, 0.6, 3, 3);
+}
+
+.button
+{
+    -fx-background-color: #993a1d;
+}

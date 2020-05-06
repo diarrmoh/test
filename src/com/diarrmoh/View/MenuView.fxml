@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane id="pane" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../Data/CSS/Menu.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.diarrmoh.Controller.MenuController">
+   <children>
+      <HBox alignment="CENTER" fillHeight="false" prefHeight="1080.0" prefWidth="1920.0">
+         <children>
+            <VBox id="left" alignment="CENTER" fillWidth="false" prefHeight="1080.0" prefWidth="576.0">
+               <children>
+                  <ImageView fx:id="image_G" fitHeight="800.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
+               </children></VBox>
+            <HBox id="mid" alignment="CENTER" fillHeight="false" prefHeight="1080.0" prefWidth="768.0" spacing="100.0">
+               <children>
+                  <VBox alignment="CENTER" fillWidth="false" spacing="50.0">
+                     <children>
+                        <ImageView fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Data/Play.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Data/Setting.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Data/exit.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" fillWidth="false" spacing="50.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#play" prefHeight="96.0" prefWidth="400.0" text="Play" textFill="WHITE">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#setting" prefHeight="96.0" prefWidth="400.0" text="Setting" textFill="WHITE">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#exit" prefHeight="96.0" prefWidth="400.0" text="Exit" textFill="WHITE">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox id="right" alignment="CENTER" fillWidth="false" prefHeight="1080.0" prefWidth="576.0">
+               <children>
+                  <ImageView fx:id="image_D" fitHeight="800.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
+               </children></VBox>
+         </children>
+      </HBox>
+   </children>
+</Pane>

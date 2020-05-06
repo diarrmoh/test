@@ -44,6 +44,8 @@ public abstract class Character implements Characters {
 
     protected boolean inAttack;
 
+    protected boolean isDying;
+
     protected AnimationEnum animationState;
 
     protected Orientation orientation;
@@ -65,6 +67,8 @@ public abstract class Character implements Characters {
     protected Element element;
 
     public Character(String name, ImageView imageView, LinkedList<ImageView> projectileImageView, int playerNum, boolean selected) {
+
+        this.isDying = false;
 
         this.projectileImageView = projectileImageView;
 
@@ -332,6 +336,14 @@ public abstract class Character implements Characters {
         this.maxUlti = maxUlti;
     }
 
+    @Override
+    public boolean isDying() {
+        return isDying;
+    }
+
+    public void setIsDying(boolean isDying) {
+        this.isDying = isDying;
+    }
 
     @Override
     public void attack() {

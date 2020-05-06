@@ -44,6 +44,10 @@ public interface Characters {
 
     void setSelected(boolean selected);
 
+    boolean isDying();
+
+    void setIsDying(boolean isDyind);
+
     AnimationEnum getAnimationState();
 
     void setAnimationState(AnimationEnum animationState);

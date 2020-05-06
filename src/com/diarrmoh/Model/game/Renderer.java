@@ -120,6 +120,18 @@ public class Renderer {
                             characters.attack();
                         }
                     }
+                } else if (characters.getAnimationState().equals(AnimationEnum.DEATH)) {
+                    if (rate % 20 == 0){
+
+                        if (characters.getImageView() != null) characters.getImageView().setImage(characters.getDeathImage()[deathRate]);
+                        deathRate++;
+                        deathRate %= characters.getDeathImage().length;
+                        if (deathRate == 0) {
+                            characters.setIsDying(false);
+                            characters.setAnimationState(AnimationEnum.IDLE);
+                            characters.setHealthPoint(characters.getMaxHealth());
+                        }
+                    }
                 }
             }
 

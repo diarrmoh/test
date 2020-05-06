@@ -144,15 +144,16 @@ public class LobbyController implements Initializable {
     }
 
     private Characters[] getPlayers() {
-        Characters[] characters = new Characters[4];
+        Characters[] characters = new Characters[2];
 
         playerSelect(characters, playerOneName, 0);
 
         playerSelect(characters, playerTwoName, 1);
 
-        playerSelect(characters, playerThreeName, 2);
+//        playerSelect(characters, playerThreeName, 2);
+//
+//        playerSelect(characters, playerFourName, 3);
 
-        playerSelect(characters, playerFourName, 3);
 
         return characters;
     }

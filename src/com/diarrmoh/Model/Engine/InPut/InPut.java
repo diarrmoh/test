@@ -58,8 +58,10 @@ public class InPut {
     }
 
     public void Update() {
-        if (!characters.isSelected()){
+        if (!characters.isSelected() || characters.isDying()){
+            if (characters.isDying()){
 
+            }
         } else {
             state = getState();
             if (state.startJustPressed){

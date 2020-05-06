@@ -5,6 +5,7 @@ import com.diarrmoh.Model.Character.Colossus.RockGolem;
 import com.diarrmoh.Model.Character.Garden.Archer;
 import com.diarrmoh.Model.Character.Sorcerer.Wizard;
 import com.diarrmoh.Model.Engine.Engine;
+import com.diarrmoh.Model.Engine.Enumeration.AnimationEnum;
 import com.diarrmoh.Model.Engine.Timer;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.ImageView;
@@ -93,19 +94,19 @@ public class GameMode implements Runnable {
         players[1].setPlayerHealthBar(playerTwoHealphBar);
         players[1].setPlayerUltiBar(playerTwoUltiBar);
 
-        players[2].setImageView(player3);
-        players[2].configImageView();
-        playerThreeIcon.setImage(players[2].getIconImage());
-        players[2].setPlayerIcon(playerThreeIcon);
-        players[2].setPlayerHealthBar(playerThreeHealphBar);
-        players[2].setPlayerUltiBar(playerThreeUltiBar);
-
-        players[3].setImageView(player4);
-        players[3].configImageView();
-        playerFourIcon.setImage(players[3].getIconImage());
-        players[3].setPlayerIcon(playerFourIcon);
-        players[3].setPlayerHealthBar(playerFourHealphBar);
-        players[3].setPlayerUltiBar(playerFourUltiBar);
+//        players[2].setImageView(player3);
+//        players[2].configImageView();
+//        playerThreeIcon.setImage(players[2].getIconImage());
+//        players[2].setPlayerIcon(playerThreeIcon);
+//        players[2].setPlayerHealthBar(playerThreeHealphBar);
+//        players[2].setPlayerUltiBar(playerThreeUltiBar);
+//
+//        players[3].setImageView(player4);
+//        players[3].configImageView();
+//        playerFourIcon.setImage(players[3].getIconImage());
+//        players[3].setPlayerIcon(playerFourIcon);
+//        players[3].setPlayerHealthBar(playerFourHealphBar);
+//        players[3].setPlayerUltiBar(playerFourUltiBar);
 
         for (int i = 0; i < players.length; i++){
             if (players[i].getClass().equals(Archer.class)){
@@ -143,6 +144,10 @@ public class GameMode implements Runnable {
         for (int i = 0; i < players.length; i++){
             players[i].getPlayerHealthBar().setProgress(players[i].getHealthPoint()/players[i].getMaxHealth());
             players[i].getPlayerUltiBar().setProgress(players[i].getMaxUlti()/players[i].getMaxUlti());
+            if (players[i].getPlayerHealthBar().getProgress() == 0) {
+                players[i].setIsDying(true);
+                players[i].setAnimationState(AnimationEnum.DEATH);
+            }
         }
     }
 
